@@ -1,0 +1,37 @@
+{
+  "name": "cartelis-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "npm run clean && babel -d ./build ./server -s ",
+    "clean": "rm -rf build",
+    "dev": "nodemon --exec babel-node ./server/index.js",
+    "start": "node ./build/index.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "mocha": "^8.2.0",
+    "nodemon": "^2.0.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "googleapis": "^65.0.0",
+    "helmet": "^4.1.1",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0"
+  }
+}
